@@ -1,0 +1,164 @@
+*{
+    font-family: Montserrat;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: #131313;
+    margin: 0;
+
+}
+h1{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.nag{
+    background-color: #131313;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    color: white;
+}
+
+.prem{
+    position: absolute;
+    left: 415px;
+    top: 100px;
+    font-size: 50px;
+}
+
+.prem2{
+    position: absolute;
+    left: 900px;
+    top: 95px;
+    font-size: 24px;
+  
+}
+.blok1{
+
+    background-color: #131313;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 40px;
+    
+}
+
+.blok2{
+    background-color: #1d1e1f;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    float: left;
+    font-size: 20px;
+    padding: 30px;
+}
+.blok2o{
+    background-color: #1d1e1f;
+    width: 80%;
+    height: 100%;
+    float: left;
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    
+}
+
+.fotos{
+    max-height: 275px;
+    border: solid 2px  #1d1e1f;
+    display: inline-block; 
+}
+
+a{
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 48px;
+    text-decoration: none;
+}
+.fotos:hover{
+    
+    border: solid 2px  #fc3b00; 
+
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #fc3b00;
+}
+h1:hover{
+    color: #fc3b00;
+}
+h3:hover{
+    color: #fc3b00;
+}
+
+.opinia{
+    margin: 20px;
+    border: solid 1px white
+}
+
+.logo{
+    max-width: 200px; 
+    position: absolute;
+    left: 100px;
+    top: 0;
+
+} 
+.adres{
+    font-size: 24px;
+}
+
+.logo_stopka{
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+    height: 80%;
+}
+
+.ft_nag{
+    font-size: 12px;
+}
+
+h3{
+    padding: 0;
+    margin: 0;
+}
+
+.oferta{
+    font-size: 20px;
+}
+
+.podpis{
+    text-align: center;
+    width: 100%;
+}
+
+
+footer{
+    background-color: #131313;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+.div_stopka{
+    width: 25%;
+}
+
+
+.lokal{
+    max-width: 500px;
+}
