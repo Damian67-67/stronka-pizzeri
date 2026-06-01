@@ -1,8 +1,11 @@
 # stronka-pizzeri
 
 
-jest to strona Mamma Mia Pizza ktora jest w trakcie konczenia...
+Strona pizzeri Mamma mia
 
 Podzial pracy:
-Maksym Bukowski: HTML + CSS
-Damian Krysiński: HTML + CSS
+Maksym Bukowski: HTML + CSS + JS
+Damian Krysiński: HTML + CSS + JS
+
+
+aby uruchomic strone nalezy pobrac wszystkie pliki, nastepnie wrzucic w ten sam folder.
