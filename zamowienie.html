@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienie - Mamma Mia Pizza</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="nag">
+
+        <img class="logo" src="logo.png" alt="Logo pizzerii">
+
+        <div class="tytuly">
+            <h1 class="prem">Mamma Mia Pizza</h1>
+            <p class="prem2">- Smaczna, włoska, na każdą kieszeń</p>
+        </div>
+
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="blok1">
+        <a href="index.html">START</a>
+        <a href="onas.html">O NAS</a>
+        <a href="menu.html">MENU</a>
+        <a href="zamowienie.html">ZAMÓWIENIE</a>
+        <a href="kontakt.html">KONTAKT</a>
+        <a href="opinie.html">OPINIE</a>
+        
+    </div>
+
+    <div class="blok2">
+
+        <h1>Zamówienie</h1>
+
+    <form id="formularz">
+
+        <h3>Imię i nazwisko</h3>
+        <input type="text" id="imie">
+
+        <h3>Telefon</h3>
+        <input type="text" id="telefon">
+
+        <h3>Adres</h3>
+        <input type="text" id="adres">
+
+        <h3>Pizza</h3>
+        <select id="pizza">
+            <option>Margherita</option>
+            <option>Pepperoni</option>
+            <option>Capricciosa</option>
+            <option>Funghi</option>
+            <option>Hawajska</option>
+            <option>Diavola</option>
+            <option>Vegetariana</option>
+            <option>Quattro Formaggi</option>
+            <option>Prosciutto Crudo</option>
+            <option>Pizza BBQ</option>
+        </select>
+
+        <h3>Rozmiar</h3>
+        <select id="rozmiar">
+            <option>32 cm</option>
+            <option>67 cm</option>
+        </select>
+
+        <h3>Uwagi</h3>
+        <textarea id="uwagi"></textarea>
+
+        <br><br>
+
+        <button type="submit">Zamów</button>
+
+    </form>
+
+    <p id="komunikat"></p>
+    <div id="wynik"></div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<footer>
+    <div class="div_stopka"><img class="logo_stopka" src="logo.png"></div>
+
+    <div class="div_stopka">
+        <h2>Kontakt</h2>
+        <p>📞+48 920 213 123</p>
+        <a class="oferta" href="mailto:kontakt@mammamiapizza.pl">✉️kontakt@mammamiapizza.pl</a>
+    </div>
+
+    <div class="div_stopka">
+        <h2>Zapraszamy</h2>
+        <p>📍 Gniezno ul. Rynek 15</p>
+        <p>12:00-22:00</p>
+    </div>
+
+    <div class="div_stopka">
+        <h2>Sociale</h2>
+        <a class="ft_nag" href="https://facebook.com/mammamiapizza">FACEBOOK</a><br>
+        <a class="ft_nag" href="https://instagram.com/mammamiapizza">INSTAGRAM</a>
+    </div>
+
+    <p class="podpis">© 2026 Mamma Mia Pizza</p>
+</footer>
+
+
+<script>
+
+    window.addEventListener("DOMContentLoaded", function () {
+
+    const formularz = document.getElementById("formularz");
+
+    if (!formularz) return;
+
+    formularz.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        let imie = document.getElementById("imie").value;
+        let telefon = document.getElementById("telefon").value;
+        let adres = document.getElementById("adres").value;
+        let pizza = document.getElementById("pizza").value;
+        let rozmiar = document.getElementById("rozmiar").value;
+        let uwagi = document.getElementById("uwagi").value;
+
+        let komunikat = document.getElementById("komunikat");
+        let wynik = document.getElementById("wynik");
+
+        if (imie.trim() === "") {
+            komunikat.innerHTML = "Podaj imię i nazwisko";
+            wynik.innerHTML = "";
+            return;
+        }
+
+        if (!/^[0-9]{9}$/.test(telefon)) {
+            komunikat.innerHTML = " Telefon musi mieć 9 cyfr";
+            wynik.innerHTML = "";
+            return;
+        }
+
+        if (adres.trim() === "") {
+            komunikat.innerHTML = " Podaj adres";
+            wynik.innerHTML = "";
+            return;
+        }
+
+        komunikat.innerHTML = " Zamówienie wysłane!";
+
+        wynik.innerHTML = `
+            <h2>Twoje zamówienie</h2>
+            <p><b>Imię:</b> ${imie}</p>
+            <p><b>Telefon:</b> ${telefon}</p>
+            <p><b>Adres:</b> ${adres}</p>
+            <p><b>Pizza:</b> ${pizza}</p>
+            <p><b>Rozmiar:</b> ${rozmiar}</p>
+            <p><b>Uwagi:</b> ${uwagi}</p>
+        `;
+
+        formularz.reset();
+
+    });
+
+});
+
+
+</script>
+
+</body>
+</html>
